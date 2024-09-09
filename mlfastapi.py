@@ -6,7 +6,7 @@ import pickle
 app = FastAPI(debug=True)
 
 # Load the model and label encoders when the app starts
-with open('C:/Users/ASUS/Documents/IS_Project/assign2/saved_steps.pkl', 'rb') as file:
+with open('saved_steps.pkl', 'rb') as file:
     data = pickle.load(file)
     model = data['model']
     le_country = data['le_country']
