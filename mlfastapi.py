@@ -72,21 +72,7 @@ def update_salary(request: SalaryPredictionRequest):
     return {'The updated estimated salary is {}'.format(output)}
 
 
-@app.delete('/delete_salary')
-def delete_salary(country: str, education_level: str, years_of_experience: int):
-    # Example logic for deletion, this could be adjusted depending on your needs
-    # Transform the input using the label encoders
-    country_encoded = le_country.transform([country])[0]
-    education_encoded = le_education.transform([education_level])[0]
 
-    # Check if the combination exists and simulate deletion
-    # Since this is a model prediction app, we'll simulate the deletion process
-    # Example: if country, education, and experience match certain conditions, delete it
-    
-    if country_encoded == 1 and education_encoded == 2 and years_of_experience == 5:
-        return {'message': 'Entry deleted successfully.'}
-    else:
-        raise HTTPException(status_code=404, detail="Entry not found for deletion.")
 
 
 
