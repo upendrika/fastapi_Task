@@ -44,16 +44,5 @@ def predict_post(request: SalaryPredictionRequest):
 
     return {'The estimated salary is {}'.format(output)}
 
-@app.put('/update_salary')
-def update_salary(request: SalaryPredictionRequest):
-    
-    country_encoded = le_country.transform([request.country])[0]
-    education_encoded = le_education.transform([request.education_level])[0]
-    input_data = [[country_encoded, education_encoded, request.years_of_experience]]
-    prediction = model.predict(input_data)
-    output = round(prediction[0], 2)
-
-    return {'The updated estimated salary is {}'.format(output)}
-
 if __name__ == '__main__':
     uvicorn.run("mlfastapi:app", host="0.0.0.0", port=8000, reload=True)
