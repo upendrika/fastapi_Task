@@ -72,4 +72,4 @@ def update_salary(request: SalaryPredictionRequest):
     return {'The updated estimated salary is {}'.format(output)}
 
 if __name__ == '__main__':
-    uvicorn.run("mlfastapi:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("mlfastapi:app", host="0.0.0.0", port=8000, reload=True)
