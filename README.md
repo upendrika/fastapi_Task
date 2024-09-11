@@ -6,7 +6,7 @@ This FastAPI application provides an API for predicting software developer salar
 
 - **GET `/calculate_salary`**: Predict salary using query parameters.
 - **POST `/predict_salary`**: Predict salary using JSON payload.
-- **PUT `/update_salary`**: Update and predict salary based on user input.
+
 
 
 ## Getting Started
