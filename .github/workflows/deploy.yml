@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy to Render
         env:
-          RENDER_API_KEY: ${{ secrets.srv-crfvp2bv2p9s73a4bqtg }}
+          RENDER_API_KEY: ${{ secrets.rnd_yVnikujX6Hl75Qut5ACvaJxqOsFg }}
         run: |
           curl -X POST "https://api.render.com/v1/services/srv-crfvp2bv2p9s73a4bqtg/deploys" \
                -H "Authorization: Bearer $rnd_yVnikujX6Hl75Qut5ACvaJxqOsFg" \
