@@ -20,7 +20,7 @@ class SalaryPredictionRequest(BaseModel):
 
 @app.get('/')
 def home():
-    return {'text': 'Software Developer Salary Prediction! 2020'}
+    return {'text': 'Software Developer Salary Prediction! now'}
 
 @app.get('/calculate_salary')
 def predict_get(country: str, education_level: str, years_of_experience: int):
